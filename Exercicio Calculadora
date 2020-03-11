@@ -1,0 +1,76 @@
+//Classe operações
+public class Operacoes {
+	
+	double numero1;
+	double numero2;
+	
+	double somar() {
+		return numero1 + numero2;
+		
+	}
+	
+	double dividir() {
+		return numero1 / numero2;
+		
+	}
+	
+	double subtrair() {
+		return numero1 - numero2;
+		
+	}
+	
+	double mutiplicar() {
+		return numero1 * numero2;
+		
+	}
+}
+
+//Classe Principal 
+import java.util.Scanner;
+public class Principal_calculadora {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner in = new Scanner(System.in);
+		
+		Operacoes Calculadora = new Operacoes();
+		int resposta;
+		
+		
+		System.out.println("-Escolha uma opção-");
+	    System.out.println("1. Soma");  
+	    System.out.println("2. Subtracao");  
+	    System.out.println("3. Multiplicacao");  
+	    System.out.println("4. Divisao");  
+	    System.out.println("0. Sair"); 
+	    System.out.println();
+	    System.out.print("Operação: ");  
+		resposta = in.nextInt();
+		
+		System.out.println("Digite o primeiro numero escolhido: ");
+		Calculadora.numero1 = in.nextDouble();
+		
+		System.out.println("Digite o segundo numero escolhido: ");
+		Calculadora.numero2 = in.nextDouble();
+		
+		switch(resposta) {
+			case 1:
+				System.out.println(Calculadora.somar());
+				break;
+			case 2:
+				System.out.println(Calculadora.subtrair());
+				break;
+			case 3:
+				System.out.println(Calculadora.mutiplicar());
+				break;
+			case 4:
+				System.out.println(Calculadora.dividir());
+				break;
+			case 0:
+				break;
+		}
+		
+		
+	}
+
+}
