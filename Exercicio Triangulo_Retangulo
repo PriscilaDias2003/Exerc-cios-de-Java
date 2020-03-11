@@ -1,0 +1,58 @@
+//Classe Retangulo
+public class Retangulo {
+	
+	double base;
+	double altura;
+	
+	double areaRetangulo() {
+		
+		return base * altura;
+		
+	}
+}
+
+//Classe Triangulo
+public class Triangulo {
+	
+	double base;
+	double altura;
+	
+	double areaTriangulo(){
+		
+		return (base * altura) / 2;
+		
+	}
+}
+
+//Classe Principal 
+import java.util.Scanner;
+public class Principal_Triangulo_Retangulo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner in = new Scanner(System.in);
+		
+		Triangulo primeiroTriangulo = new Triangulo();
+		Retangulo primeiroRetangulo = new Retangulo();
+		
+		System.out.println("Digite um valor para a altura do Triangulo: ");
+		primeiroTriangulo.altura = in.nextDouble();
+		
+		System.out.println("Digite um valor para a base do Triangulo: ");
+		primeiroTriangulo.base = in.nextDouble();
+		
+		System.out.println("A area do seu Triangulo é = " + primeiroTriangulo.areaTriangulo());
+		
+		System.out.println("-------------------------------------------------------------");
+		
+		System.out.println("Digite um valor para a altura do Retangulo: ");
+		primeiroRetangulo.altura = in.nextDouble();
+		
+		System.out.println("Digite um valor para a base do Retangulo: ");
+		primeiroRetangulo.base = in.nextDouble();
+		
+		System.out.println("A area do seu Triangulo é = " + primeiroRetangulo.areaRetangulo());
+	}
+
+}
+
